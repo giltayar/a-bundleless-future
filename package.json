@@ -1,0 +1,7 @@
+{
+  "name": "a-bundleless-future",
+  "private": true,
+  "workspaces": [
+    "./step-1-one-file"
+  ]
+}
