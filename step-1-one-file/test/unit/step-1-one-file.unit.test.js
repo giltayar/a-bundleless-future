@@ -6,9 +6,11 @@ describe('step-1-one-file (unit)', function () {
   beforeEach(async () => {
     const {window} = new JSDOM(`
       <h1>Counter</h1>
-      <button id="decrease-counter">-</button>
-      <span id="counter">0</span>
-      <button id="increase-counter">+</button>
+      <div id="counter">
+        <button class="decrease-counter">-</button>
+        <span class="counter-value">0</span>
+        <button class="increase-counter">+</button>
+      </div>
     `)
     globalThis.window = window
     globalThis.document = window.document
@@ -17,25 +19,31 @@ describe('step-1-one-file (unit)', function () {
   })
 
   it('should increment', async () => {
-    document.querySelector('#increase-counter').click()
+    const counterElement = document.querySelector('#counter')
 
-    expect(document.querySelector('#counter').textContent).to.equal('1')
+    counterElement.querySelector('.increase-counter').click()
+
+    expect(counterElement.querySelector('.counter-value').textContent).to.equal('1')
   })
 
   it('should decrement', async () => {
-    document.querySelector('#increase-counter').click()
-    document.querySelector('#increase-counter').click()
-    document.querySelector('#increase-counter').click()
-    document.querySelector('#decrease-counter').click()
+    const counterElement = document.querySelector('#counter')
 
-    expect(document.querySelector('#counter').textContent).to.equal('2')
+    counterElement.querySelector('.increase-counter').click()
+    counterElement.querySelector('.increase-counter').click()
+    counterElement.querySelector('.increase-counter').click()
+    counterElement.querySelector('.decrease-counter').click()
+
+    expect(counterElement.querySelector('.counter-value').textContent).to.equal('2')
   })
 
   it('should not decrement under 0', async () => {
-    document.querySelector('#increase-counter').click()
-    document.querySelector('#decrease-counter').click()
-    document.querySelector('#decrease-counter').click()
+    const counterElement = document.querySelector('#counter')
 
-    expect(document.querySelector('#counter').textContent).to.equal('0')
+    counterElement.querySelector('.increase-counter').click()
+    counterElement.querySelector('.decrease-counter').click()
+    counterElement.querySelector('.decrease-counter').click()
+
+    expect(counterElement.querySelector('.counter-value').textContent).to.equal('0')
   })
 })

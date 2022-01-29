@@ -1,9 +1,11 @@
 const counterElement = document.querySelector('#counter')
 
-document.querySelector('#increase-counter').addEventListener('click', function () {
-  counterElement.textContent = parseInt(counterElement.textContent ?? '0', 10) + 1
+const counterValueElement = counterElement.querySelector('.counter-value')
+
+counterElement.querySelector('.increase-counter').addEventListener('click', function () {
+  counterValueElement.textContent = parseInt(counterValueElement.textContent, 10) + 1
 })
 
-document.querySelector('#decrease-counter').addEventListener('click', function () {
-  counterElement.textContent = Math.max(parseInt(counterElement.textContent ?? '0', 10) - 1, 0)
+counterElement.querySelector('.decrease-counter').addEventListener('click', function () {
+  counterValueElement.textContent = Math.max(parseInt(counterValueElement.textContent, 10) - 1, 0)
 })
