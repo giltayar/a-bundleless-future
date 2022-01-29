@@ -2,7 +2,7 @@ import {describe, it, beforeEach} from 'mocha'
 import {expect} from 'chai'
 import {JSDOM} from 'jsdom'
 
-describe('step-1-one-file (unit)', function () {
+describe('integ', function () {
   beforeEach(async () => {
     const {window} = new JSDOM(`
       <h1>Counter</h1>

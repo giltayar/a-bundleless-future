@@ -3,7 +3,7 @@ import {expect} from 'chai'
 import {execaCommand} from 'execa'
 import puppeteer from 'puppeteer'
 
-describe('step-1-one-file (integ)', function () {
+describe('e2e', function () {
   before(async () => {
     execaCommand('serve src')
   })
