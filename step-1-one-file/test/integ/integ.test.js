@@ -1,17 +1,11 @@
+import fs from 'fs/promises'
 import {describe, it, beforeEach} from 'mocha'
 import {expect} from 'chai'
 import {JSDOM} from 'jsdom'
 
 describe('integ', function () {
   beforeEach(async () => {
-    const {window} = new JSDOM(`
-      <h1>Counter</h1>
-      <div id="counter">
-        <button class="decrease-counter">-</button>
-        <span class="counter-value">0</span>
-        <button class="increase-counter">+</button>
-      </div>
-    `)
+    const {window} = new JSDOM(await fs.readFile('src/index.html', 'utf-8'))
     globalThis.window = window
     globalThis.document = window.document
 
