@@ -2,6 +2,7 @@
   "name": "a-bundleless-future",
   "private": true,
   "workspaces": [
-    "./step-1-one-file"
+    "./step-1-one-file",
+    "./step-2-two-files"
   ]
 }

@@ -18,7 +18,8 @@
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
-    "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'"
+    "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
+    "build:bundle": "rollup --dir=dist -- src/step-2-two-files.js"
   },
   "keywords": [
     "javascript",
@@ -54,6 +55,7 @@
     "prettier": "^2.5.1",
     "prettier-plugin-jsdoc": "^0.3.30",
     "puppeteer": "^13.1.2",
+    "rollup": "^2.66.1",
     "serve": "^13.0.2"
   }
 }
