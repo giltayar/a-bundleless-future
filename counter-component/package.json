@@ -1,12 +1,12 @@
 {
-  "name": "step-2-two-files",
+  "name": "counter-component",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "type": "module",
-  "exports": "./src/step-2-two-files.js",
-  "main": "./src/step-2-two-files.js",
-  "types": "./types/src/step-2-two-files.d.ts",
+  "exports": "./src/counter-component.js",
+  "main": "./src/counter-component.js",
+  "types": "./types/src/counter-component.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -14,12 +14,12 @@
     "src"
   ],
   "scripts": {
-    "start": "serve src",
+    "start": "serve .",
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/step-2-two-files.js"
+    "build:bundle": "rollup --dir=dist -- src/counter-component.js"
   },
   "keywords": [
     "javascript",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/giltayar/a-bundleless-future",
-    "directory": "step-2-two-files",
+    "directory": "counter-component",
     "type": "git"
   },
   "devDependencies": {
@@ -49,6 +49,7 @@
     "eslint-plugin-mocha-no-only": "^1.1.1",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "execa": "^6.0.0",
     "jsdom": "^19.0.0",
     "mocha": "^9.2.0",
     "prettier": "^2.5.1",

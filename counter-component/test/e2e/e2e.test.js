@@ -7,13 +7,13 @@ import killPort from 'kill-port'
 describe('e2e', function () {
   before(async () => {
     await killPort(3000)
-    spawn('serve', ['src'])
+    spawn('serve', ['.'])
   })
 
   it('should work in a browser', async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
-    await page.goto('http://localhost:3000')
+    await page.goto('http://localhost:3000/test/fixtures/')
 
     await (await page.$('#counter-1 .increase-counter')).click()
     await (await page.$('#counter-2 .increase-counter')).click()

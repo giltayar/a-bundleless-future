@@ -1,11 +1,13 @@
 import {describe, it, before} from 'mocha'
 import {expect} from 'chai'
-import {execaCommand} from 'execa'
+import {spawn} from 'child_process'
 import puppeteer from 'puppeteer'
+import killPort from 'kill-port'
 
 describe('e2e', function () {
   before(async () => {
-    execaCommand('serve src')
+    await killPort(3000)
+    spawn('serve', ['src'])
   })
 
   it('should work in a browser', async () => {

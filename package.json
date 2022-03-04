@@ -3,6 +3,7 @@
   "private": true,
   "workspaces": [
     "./step-1-one-file",
-    "./step-2-two-files"
+    "./step-2-two-files",
+    "./counter-component"
   ]
 }

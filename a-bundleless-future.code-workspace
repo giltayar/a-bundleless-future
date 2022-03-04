@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "step-2-two-files"
+		},
+		{
+			"path": "counter-component"
 		}
 	],
 	"settings": {}

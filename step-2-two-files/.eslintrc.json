@@ -9,8 +9,8 @@
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
-  "extends": ["plugin:node/recommended"],
-  "plugins": ["@reggev/eslint-plugin-it-should-be-skipped", "prettier", "mocha-no-only", "node"],
+  "extends": ["plugin:n/recommended"],
+  "plugins": ["@reggev/eslint-plugin-it-should-be-skipped", "prettier", "mocha-no-only", "n"],
   "rules": {
     "prettier/prettier": ["warn"],
     "no-warning-comments": [
@@ -29,13 +29,13 @@
     "constructor-super": "warn",
     "valid-typeof": "warn",
     "mocha-no-only/mocha-no-only": "warn",
-    "node/no-unsupported-features/es-syntax": [
+    "n/no-unsupported-features/es-syntax": [
       "error",
       {
         "ignores": ["dynamicImport", "modules"]
       }
     ],
-    "node/exports-style": ["error", "module.exports"],
+    "n/exports-style": ["error", "module.exports"],
     "@reggev/it-should-be-skipped/it-should-be-skipped": ["warn"]
   }
 }

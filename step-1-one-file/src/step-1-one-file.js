@@ -1,5 +1,10 @@
 const counterElement = document.querySelector('#counter')
 
+counterElement.innerHTML = `
+<button class="decrease-counter">-</button>
+<span class="counter-value">0</span>
+<button class="increase-counter">+</button>`
+
 const counterValueElement = counterElement.querySelector('.counter-value')
 
 counterElement.querySelector('.increase-counter').addEventListener('click', function () {

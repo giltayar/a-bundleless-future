@@ -5,6 +5,7 @@ import {JSDOM} from 'jsdom'
 describe('counter-component unit', function () {
   beforeEach(async () => {
     const {window} = new JSDOM(`<div id="counter"></div>`)
+
     globalThis.window = window
     globalThis.document = window.document
 
