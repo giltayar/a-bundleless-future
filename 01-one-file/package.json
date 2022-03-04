@@ -14,7 +14,7 @@
     "src"
   ],
   "scripts": {
-    "start": "serve src",
+    "start": "serve .",
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",

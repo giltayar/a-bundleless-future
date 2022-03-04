@@ -7,7 +7,7 @@ import killPort from 'kill-port'
 describe('e2e', function () {
   before(async () => {
     await killPort(3000)
-    spawn('serve', ['src'])
+    spawn('serve', ['.'])
   })
 
   it('should work in a browser', async () => {
