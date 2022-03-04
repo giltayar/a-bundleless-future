@@ -1,12 +1,12 @@
 {
-  "name": "step-1-one-file",
+  "name": "01-one-file",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "type": "module",
-  "exports": "./src/step-1-one-file.js",
-  "main": "./src/step-1-one-file.js",
-  "types": "./types/src/step-1-one-file.d.ts",
+  "exports": "./src/01-one-file.js",
+  "main": "./src/01-one-file.js",
+  "types": "./types/src/01-one-file.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -30,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/giltayar/a-bundleless-future",
-    "directory": "step-1-one-file",
+    "directory": "01-one-file",
     "type": "git"
   },
   "devDependencies": {

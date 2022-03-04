@@ -1,12 +1,12 @@
 {
-  "name": "step-2-two-files",
+  "name": "02-two-files",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "type": "module",
-  "exports": "./src/step-2-two-files.js",
-  "main": "./src/step-2-two-files.js",
-  "types": "./types/src/step-2-two-files.d.ts",
+  "exports": "./src/02-two-files.js",
+  "main": "./src/02-two-files.js",
+  "types": "./types/src/02-two-files.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -19,7 +19,7 @@
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/step-2-two-files.js"
+    "build:bundle": "rollup --dir=dist -- src/02-two-files.js"
   },
   "keywords": [
     "javascript",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/giltayar/a-bundleless-future",
-    "directory": "step-2-two-files",
+    "directory": "02-two-files",
     "type": "git"
   },
   "devDependencies": {

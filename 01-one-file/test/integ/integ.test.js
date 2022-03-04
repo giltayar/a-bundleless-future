@@ -9,7 +9,7 @@ describe('integ', function () {
     globalThis.window = window
     globalThis.document = window.document
 
-    await import(`../../src/step-1-one-file.js?${Math.random()}`)
+    await import(`../../src/01-one-file.js?${Math.random()}`)
   })
 
   it('should increment', async () => {

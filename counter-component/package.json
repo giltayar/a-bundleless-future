@@ -1,12 +1,11 @@
 {
-  "name": "counter-component",
+  "name": "a-bundleless-future-counter-component",
   "version": "1.0.0",
   "description": "",
-  "private": "true",
   "type": "module",
-  "exports": "./src/counter-component.js",
-  "main": "./src/counter-component.js",
-  "types": "./types/src/counter-component.d.ts",
+  "exports": "./src/a-bundleless-future-counter-component.js",
+  "main": "./src/a-bundleless-future-counter-component.js",
+  "types": "./types/src/a-bundleless-future-counter-component.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -19,7 +18,7 @@
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/counter-component.js"
+    "build:bundle": "rollup --dir=dist -- src/a-bundleless-future-counter-component.js"
   },
   "keywords": [
     "javascript",
@@ -31,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/giltayar/a-bundleless-future",
-    "directory": "counter-component",
+    "directory": "a-bundleless-future-counter-component",
     "type": "git"
   },
   "devDependencies": {
