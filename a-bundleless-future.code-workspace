@@ -1,12 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "step-1-one-file"
+			"name": "01-one-file",
+			"path": "01-one-file"
 		},
 		{
-			"path": "step-2-two-files"
+			"name": "02-two-files",
+			"path": "02-two-files"
 		},
 		{
+			"name": "03-import-package-directly",
+			"path": "03-import-package-directly"
+		},
+		{
+			"name": "counter-component",
 			"path": "counter-component"
 		}
 	],
