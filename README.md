@@ -1,4 +1,4 @@
-# A Bundlesless Future
+# A Bundlesless Futurex
 
 ## Step #3: separate component with direct path to node_modules file
 

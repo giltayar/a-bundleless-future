@@ -1,8 +1,7 @@
+import html from './html.js'
+
 export function makeCounterComponent(rootElement) {
-  rootElement.innerHTML = `
-<button class="decrease-counter">-</button>
-<span class="counter-value">0</span>
-<button class="increase-counter">+</button>`
+  rootElement.innerHTML = html
 
   const counterValueElement = rootElement.querySelector('.counter-value')
 
