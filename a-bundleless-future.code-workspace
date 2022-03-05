@@ -17,6 +17,14 @@
 			"path": "04-importmaps-dev"
 		},
 		{
+			"name": "05-importmaps-prod-jspm",
+			"path": "05-importmaps-prod-jspm"
+		},
+		{
+			"name": "06-importmaps-prod-cdn",
+			"path": "06-importmaps-prod-cdn"
+		},
+		{
 			"name": "counter-component",
 			"path": "counter-component"
 		}
