@@ -13,6 +13,10 @@
 			"path": "03-import-package-directly"
 		},
 		{
+			"name": "04-importmaps-dev",
+			"path": "04-importmaps-dev"
+		},
+		{
 			"name": "counter-component",
 			"path": "counter-component"
 		}

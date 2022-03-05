@@ -6,7 +6,7 @@
 
 For dev, by mapping to node_modules
 
-## Step #5: same, but for dev, by mapping to jspm.dev
+## Step #5: same, but for prod, by mapping to jspm.dev
 
 <https://jspm.dev/npm:a-bundleless-future-counter-component@1.0.1>
 
