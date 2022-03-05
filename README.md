@@ -4,19 +4,27 @@
 
 ## Step #4: using importmaps to use component package with bare specifier
 
-## Step #5: adding the shim to support Firefox/Safari
+For dev, by mapping to node_modules
 
-## Step #6: using resources in the package
+## Step #5: same, but for dev, by mapping to jspm.dev
 
-## Step #7: React without transpiling
+<https://jspm.dev/npm:a-bundleless-future-counter-component@1.0.1>
 
-## Step #8: React with transpiling
+## Step #6: same, but bundling and uploading by ourselves to a CDN
 
-## Step #10: Using TypeScript
+## Step #7: generating importmap automatically
 
-## Step #11: Bundling Packages (two components in the package)
+## Step #8: adding the shim to support Firefox/Safari
 
-## How we do this at Roundforest
+## Step #9: using resources in the package
+
+## Step #10: React without transpiling
+
+## Step #11: React with transpiling
+
+## Step #12: Using TypeScript
+
+## Step #13: Bundling Packages (two components in the package)
 
 ## Summary
 
