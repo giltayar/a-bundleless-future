@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One File Counter App</title>
+</head>
+<body>
+  <script type="importmap">
+  {
+    "imports": {
+      "a-bundleless-future-counter-component":
+        "https://jspm.dev/npm:a-bundleless-future-counter-component@1.0.1"
+    }
+  }
+  </script>
+  <script src="./05-importmaps-prod-jspm.js" type="module"></script>
+
+  <h1>Counter #1</h1>
+  <div id="counter-1"></div>
+
+  <h1>Counter #2</h1>
+  <div id="counter-2"></div>
+
+</body>
+</html>
