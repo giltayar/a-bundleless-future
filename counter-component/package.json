@@ -1,6 +1,6 @@
 {
   "name": "a-bundleless-future-counter-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "type": "module",
   "exports": "./src/a-bundleless-future-counter-component.js",
@@ -14,12 +14,13 @@
   ],
   "scripts": {
     "start": "serve .",
+    "build": "mkdir -p dist && rm -rf dist/${npm_package_version} && cp -R src dist/${npm_package_version}/",
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
     "build:bundle": "rollup --dir=dist -- src/a-bundleless-future-counter-component.js",
-    "postpublish": "netlify deploy --site a-bundleless-future --dir src --prod"
+    "postpublish": "netlify deploy --site a-bundleless-future --dir dist --prod"
   },
   "keywords": [
     "javascript",
@@ -52,11 +53,11 @@
     "execa": "^6.1.0",
     "jsdom": "^19.0.0",
     "mocha": "^9.2.1",
-    "netlify-cli": "^9.12.3",
+    "netlify-cli": "^9.12.4",
     "prettier": "^2.5.1",
     "prettier-plugin-jsdoc": "^0.3.30",
-    "puppeteer": "^13.4.1",
-    "rollup": "^2.69.1",
+    "puppeteer": "^13.5.0",
+    "rollup": "^2.70.0",
     "serve": "^13.0.2"
   },
   "dependencies": {
