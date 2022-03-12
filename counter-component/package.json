@@ -1,10 +1,10 @@
 {
   "name": "a-bundleless-future-counter-component",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "type": "module",
-  "exports": "./index.js",
-  "main": "./index.js",
+  "exports": "./src/index.js",
+  "main": "./src/index.js",
   "engines": {
     "node": ">=16.0.0"
   },
