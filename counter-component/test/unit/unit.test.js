@@ -9,9 +9,7 @@ describe('counter-component unit', function () {
     globalThis.window = window
     globalThis.document = window.document
 
-    const {makeCounterComponent} = await import(
-      `../../src/a-bundleless-future-counter-component.js`
-    )
+    const {makeCounterComponent} = await import(`../../src/index.js`)
 
     makeCounterComponent(document.querySelector('#counter'))
   })

@@ -1,6 +1,6 @@
 {
   "name": "a-bundleless-future-counter-component",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "type": "module",
   "exports": "./src/a-bundleless-future-counter-component.js",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "start": "serve .",
-    "build": "rm -rf dist && mkdir -p dist/a-bundleless-future-counter-component/${npm_package_version} && cp -R src dist/a-bundleless-future-counter-component/${npm_package_version}/src",
+    "build": "rm -rf dist && mkdir -p dist/a-bundleless-future-counter-component/ && cp -R src dist/a-bundleless-future-counter-component/${npm_package_version}/",
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
