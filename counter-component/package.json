@@ -1,6 +1,6 @@
 {
   "name": "a-bundleless-future-counter-component",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "type": "module",
   "exports": "./src/a-bundleless-future-counter-component.js",
@@ -14,12 +14,11 @@
   ],
   "scripts": {
     "start": "serve .",
-    "build": "mkdir -p dist/counter-component && rm -rf dist/counter-component/${npm_package_version} && cp -R src dist/counter-component/${npm_package_version}/",
+    "build": "rm -rf dist && mkdir -p dist/a-bundleless-future-counter-component/${npm_package_version} && cp -R src dist/a-bundleless-future-counter-component/${npm_package_version}/src",
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/a-bundleless-future-counter-component.js",
     "postpublish": "netlify deploy --site a-bundleless-future --dir dist --prod"
   },
   "keywords": [
@@ -46,18 +45,17 @@
     "chai": "^4.3.6",
     "chai-subset": "^1.6.0",
     "concurrently": "^7.0.0",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
     "eslint-plugin-n": "^15.0.1",
     "eslint-plugin-prettier": "^4.0.0",
     "execa": "^6.1.0",
     "jsdom": "^19.0.0",
-    "mocha": "^9.2.1",
-    "netlify-cli": "^9.12.4",
+    "mocha": "^9.2.2",
+    "netlify-cli": "^9.13.0",
     "prettier": "^2.5.1",
-    "prettier-plugin-jsdoc": "^0.3.30",
-    "puppeteer": "^13.5.0",
-    "rollup": "^2.70.0",
+    "prettier-plugin-jsdoc": "^0.3.31",
+    "puppeteer": "^13.5.1",
     "serve": "^13.0.2"
   },
   "dependencies": {
