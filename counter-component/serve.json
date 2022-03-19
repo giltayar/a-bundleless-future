@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/test/fixtures/", "type": 302}
+  ]
+}
