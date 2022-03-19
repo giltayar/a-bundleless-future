@@ -25,6 +25,18 @@
 			"path": "06-importmaps-prod-cdn"
 		},
 		{
+			"name": "07-importmaps-shim",
+			"path": "07-importmaps-shim"
+		},
+		{
+			"name": "08-importmaps-generation",
+			"path": "08-importmaps-generation"
+		},
+		{
+			"name": "09-counter-component-with-resource",
+			"path": "09-counter-component-with-resource"
+		},
+		{
 			"name": "counter-component",
 			"path": "counter-component"
 		}

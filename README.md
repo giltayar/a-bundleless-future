@@ -12,9 +12,9 @@ For dev, by mapping to node_modules
 
 ## Step #6: same, but bundling and uploading by ourselves to a CDN
 
-## Step #7: generating importmap automatically
+## Step #7: adding the shim to support Firefox/Safari
 
-## Step #8: adding the shim to support Firefox/Safari
+## Step #8: generating importmap automatically
 
 ## Step #9: using resources in the package
 
@@ -25,6 +25,20 @@ For dev, by mapping to node_modules
 ## Step #12: Using TypeScript
 
 ## Step #13: Bundling Packages (two components in the package)
+
+## Production
+
+### Performance implications
+
+### Code Splitting
+
+### No need for Webpack Module Federation
+
+## How we use it at Roundforest
+
+### Packages bundled
+
+### JSPM for 3rd party
 
 ## Summary
 
