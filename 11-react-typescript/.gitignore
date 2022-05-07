@@ -1,0 +1,7 @@
+types
+dist
+lib
+.temp
+node_modules
+.history
+
