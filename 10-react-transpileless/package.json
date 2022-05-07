@@ -1,12 +1,12 @@
 {
-  "name": "02-two-files",
+  "name": "10-react-transpileless",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "type": "module",
-  "exports": "./src/02-two-files.js",
-  "main": "./src/02-two-files.js",
-  "types": "./types/src/02-two-files.d.ts",
+  "exports": "./src/10-react-transpileless.js",
+  "main": "./src/10-react-transpileless.js",
+  "types": "./types/src/10-react-transpileless.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -19,7 +19,7 @@
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "mocha": "mocha --no-timeouts --exit --color 'test/unit/*.test.js' 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/02-two-files.js"
+    "build:bundle": "rollup --dir=dist -- src/10-react-transpileless.js"
   },
   "keywords": [
     "javascript",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/giltayar/a-bundleless-future",
-    "directory": "02-two-files",
+    "directory": "10-react-transpileless",
     "type": "git"
   },
   "devDependencies": {
