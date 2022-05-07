@@ -37,6 +37,10 @@
 			"path": "09-counter-component-with-resource"
 		},
 		{
+			"name": "10-react-transpileless",
+			"path": "10-react-transpileless"
+		},
+		{
 			"name": "counter-component",
 			"path": "counter-component"
 		}
