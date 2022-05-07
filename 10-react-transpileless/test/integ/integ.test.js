@@ -10,7 +10,7 @@ describe('integ', function () {
     globalThis.window = window
     globalThis.document = window.document
 
-    await import(`../../src/02-two-files.js`)
+    await import(`../../src/10-react-transpileless.js`)
     await setTimeout(0)
     globalThis.IS_REACT_ACT_ENVIRONMENT = true
   })
