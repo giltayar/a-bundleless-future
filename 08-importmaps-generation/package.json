@@ -60,6 +60,6 @@
     "serve": "^13.0.2"
   },
   "dependencies": {
-    "a-bundleless-future-counter-component": "^1.0.12"
+    "a-bundleless-future-counter-component": "^1.0.13"
   }
 }

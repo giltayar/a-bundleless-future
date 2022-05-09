@@ -56,6 +56,6 @@
     "kill-port": "^1.6.1"
   },
   "dependencies": {
-    "a-bundleless-future-counter-component": "^1.0.12"
+    "a-bundleless-future-counter-component": "^1.0.13"
   }
 }
