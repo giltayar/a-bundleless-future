@@ -41,6 +41,10 @@
 			"path": "10-react-transpileless"
 		},
 		{
+			"name": "11-react-typescript",
+			"path": "11-react-typescript"
+		},
+		{
 			"name": "counter-component",
 			"path": "counter-component"
 		}
