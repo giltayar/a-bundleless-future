@@ -1,12 +1,12 @@
 {
-  "name": "06-importmaps-prod-cdn",
+  "name": "07-importmaps-shim",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "type": "module",
-  "exports": "./src/06-importmaps-prod-cdn.js",
-  "main": "./src/06-importmaps-prod-cdn.js",
-  "types": "./types/src/06-importmaps-prod-cdn.d.ts",
+  "exports": "./src/07-importmaps-shim.js",
+  "main": "./src/07-importmaps-shim.js",
+  "types": "./types/src/07-importmaps-shim.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -19,8 +19,7 @@
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
-    "mocha": "mocha --no-timeouts --exit --color 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/06-importmaps-prod-cdn.js"
+    "mocha": "mocha --no-timeouts --exit --color 'test/integ/*.test.js' 'test/e2e/*.test.js'"
   },
   "keywords": [
     "javascript",
@@ -32,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/giltayar/a-bundleless-future",
-    "directory": "06-importmaps-prod-cdn",
+    "directory": "07-importmaps-shim",
     "type": "git"
   },
   "devDependencies": {

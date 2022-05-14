@@ -1,8 +1,8 @@
 import {describe, it, beforeEach} from 'mocha'
 import {expect} from 'chai'
 import {JSDOM} from 'jsdom'
+import React from 'react'
 import {createRoot} from 'react-dom/client'
-import {html} from 'htm/react'
 import {act} from 'react-dom/test-utils'
 import {Counter} from '../../src/counter-component.js'
 
@@ -17,7 +17,7 @@ describe('counter-component unit', function () {
   })
 
   it('should increment', async () => {
-    act(() => createRoot(document.getElementById('root')!).render(html`<${Counter} />`))
+    act(() => createRoot(document.getElementById('root')!).render(<Counter />))
 
     act(() => (document.querySelector('.increase-counter') as HTMLElement).click())
 
@@ -25,7 +25,7 @@ describe('counter-component unit', function () {
   })
 
   it('should decrement', async () => {
-    act(() => createRoot(document.getElementById('root')!).render(html`<${Counter} />`))
+    act(() => createRoot(document.getElementById('root')!).render(<Counter />))
 
     act(() => {
       (document.querySelector('.increase-counter') as HTMLElement).click();
@@ -38,7 +38,7 @@ describe('counter-component unit', function () {
   })
 
   it('should not decrement under 0', async () => {
-    act(() => createRoot(document.getElementById('root')!).render(html`<${Counter} />`))
+    act(() => createRoot(document.getElementById('root')!).render(<Counter />))
 
     act(() => {
       (document.querySelector('.increase-counter') as HTMLElement).click();

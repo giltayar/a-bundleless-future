@@ -15,14 +15,14 @@
   ],
   "scripts": {
     "start": "serve .",
-    "prebuild": "node dev/update-package-versions.js",
-    "build": "rm -rf lib && tsc && cp src/index.html lib/src",
+    "prebuild": "rm -rf lib",
+    "build": "tsc",
+    "postbuild": "node dev/update-package-versions.js && cp src/index.html lib/src",
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
     "test:typescript": "tsc --noEmit",
-    "mocha": "mocha --loader=babel-register-esm --no-timeouts --exit --color 'test/unit/*.test.ts' 'test/integ/*.test.ts' 'test/e2e/*.test.ts'",
-    "build:bundle": "rollup --dir=dist -- src/11-react-typescript.js"
+    "mocha": "mocha --loader=babel-register-esm --no-timeouts --exit --color 'test/unit/*.test.tsx' 'test/integ/*.test.ts' 'test/e2e/*.test.ts'"
   },
   "keywords": [
     "javascript",
@@ -38,6 +38,7 @@
     "type": "git"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@babel/plugin-transform-typescript": "^7.16.8",
     "@reggev/eslint-plugin-it-should-be-skipped": "^1.0.1",
     "@types/chai": "^4.3.1",
@@ -66,7 +67,6 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "htm": "^3.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }

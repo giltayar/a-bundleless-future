@@ -18,8 +18,7 @@
     "test": "FULL_TEST=1 concurrently -r 'npm:test:*'",
     "test:mocha-parallel": "npm run mocha -- --parallel",
     "test:eslint": "eslint --color --max-warnings=0 '**/*.js'",
-    "mocha": "mocha --no-timeouts --exit --color 'test/integ/*.test.js' 'test/e2e/*.test.js'",
-    "build:bundle": "rollup --dir=dist -- src/03-import-package-directly.js"
+    "mocha": "mocha --no-timeouts --exit --color 'test/integ/*.test.js' 'test/e2e/*.test.js'"
   },
   "keywords": [
     "javascript",
