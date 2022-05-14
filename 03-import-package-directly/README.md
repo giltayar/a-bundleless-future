@@ -1,44 +1,50 @@
-# step-1-one-file
+# 03-import-package-directly
 
-A library that ???.
-
-This library is JSM-only (does not support `require`-ing it).
+Vanilla JS app showing two counter components, where the code for the counter component is
+in a package in NPM.
 
 ## Installation
 
+CD to this directory, and run
+
 ```sh
-npm install @roundforest/step-1-one-file
+$ npm ci
+...
 ```
 
 ## Basic use
 
-???
+To see the web app, just run `npm start` and navigate with your browser to
+ <http://localhost:3000>.
 
-Example:
+## Explanation
+
+The HTML is in [`./src/index.html`](./src/index.html) and, like all modern web apps,
+is a simple HTML that mostly `<script src>`-s the JavaScript code in
+[`./src/03-import-package-directly.js`](./src/03-import-package-directly.js).
+
+The JavaScript is a Vanilla JS app that displays two Counter Components. The code for the counter
+component is in an NPM package named `a-bundleless-future-counter-component`, who's source
+code can be found in the directory [`counter-component` in this repository](../counter-component/).
+
+Importing the package is done by importing the entry point JS file
+[directly from `node_modules`](./node_modules/a-bundleless-future-counter-component/src/index.js).
 
 ```js
-import {} from '@roundforest/step-1-one-file'
-???
+import {makeCounterComponent} from '../node_modules/a-bundleless-future-counter-component/src/index.js'
 ```
 
-## API
+This app run in the browser without any bundling whatsoever, using the power of native browser ESM.
 
-### `???(???)`
+## Running the tests
 
-???
+To run the tests, run...
 
-Example:
-
-```js
-import {} from '@roundforest/step-1-one-file'
-???
+```sh
+$ npm test
+...
 ```
 
-## Contributing
-
-See the documentation on contributing code to packages in this monorepo
-[here](../../CONTRIBUTING.md).
-
-### License
+## License
 
 MIT

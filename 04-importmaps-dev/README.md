@@ -1,44 +1,65 @@
-# step-1-one-file
+# 04-importmaps-dev
 
-A library that ???.
+Vanilla JS app showing two counter components, where the code for the counter component is
+in a package in NPM, and importing the package is done via importnmaps.
 
-This library is JSM-only (does not support `require`-ing it).
+> Note: this code works only in Chromium browsers and Firefox. We will see in the next steps how
+> to make it work in Safari too.
 
 ## Installation
 
+CD to this directory, and run
+
 ```sh
-npm install @roundforest/step-1-one-file
+$ npm ci
+...
 ```
 
 ## Basic use
 
-???
+To see the web app, just run `npm start` and navigate with your browser to
+ <http://localhost:3000>.
 
-Example:
+## Explanation
 
-```js
-import {} from '@roundforest/step-1-one-file'
-???
-```
+The HTML is in [`./src/index.html`](./src/index.html) and, like all modern web apps,
+is a simple HTML that mostly `<script src>`-s the JavaScript code in
+[`./src/04-importmaps-dev.js`](./src/04-importmaps-dev.js).
 
-## API
+The JavaScript is a Vanilla JS app that displays two Counter Components. The code for the counter
+component is in an NPM package named `a-bundleless-future-counter-component`, who's source
+code can be found in the directory [`counter-component` in this repository](../counter-component/).
 
-### `???(???)`
-
-???
-
-Example:
+Importing the package is done by the regular import syntax:
 
 ```js
-import {} from '@roundforest/step-1-one-file'
-???
+import {makeCounterComponent} from 'a-bundleless-future-counter-component'
 ```
 
-## Contributing
+While the browser supports native browser ESM, it does not support "bare specifiers" to packages,
+but through the magic of the importmap we added to the HTML, we explain to the browser
+where to find the entry point to the package:
 
-See the documentation on contributing code to packages in this monorepo
-[here](../../CONTRIBUTING.md).
+```html
+  <script type="importmap">
+  {
+    "imports": {
+      "a-bundleless-future-counter-component":
+        "/node_modules/a-bundleless-future-counter-component/src/index.js"
+    }
+  }
+  </script>
+```
 
-### License
+## Running the tests
+
+To run the tests, run...
+
+```sh
+$ npm test
+...
+```
+
+## License
 
 MIT
