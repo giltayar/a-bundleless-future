@@ -1,44 +1,38 @@
-# step-1-one-file
+# counter-component
 
-A library that ???.
+A library that includes a Vanilla JS implementation of the infamous "counter component". It uses
+resources (PNG-s) that are part of the package.
 
-This library is JSM-only (does not support `require`-ing it).
+This component can be used in a browser by just using browser native ESM.
 
 ## Installation
 
 ```sh
-npm install @roundforest/step-1-one-file
+npm install a-bundleless-future-counter-component
 ```
 
 ## Basic use
 
-???
+To create a component, call `makeCounterComponent(element)`. This will inject a working
+counter component into the element.
 
 Example:
 
 ```js
-import {} from '@roundforest/step-1-one-file'
-???
+import {} from 'import {} from 'a-bundleless-future-counter-component'
+
+makeCounterComponent(document.querySelector('#counter-1'))
 ```
 
-## API
+## Running the tests
 
-### `???(???)`
+To run the tests, run...
 
-???
-
-Example:
-
-```js
-import {} from '@roundforest/step-1-one-file'
-???
+```sh
+$ npm test
+...
 ```
 
-## Contributing
-
-See the documentation on contributing code to packages in this monorepo
-[here](../../CONTRIBUTING.md).
-
-### License
+## License
 
 MIT
